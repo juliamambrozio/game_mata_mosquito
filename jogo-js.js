@@ -12,7 +12,7 @@ ajustaTamanhoPalcoJogo()
 
 
 function posicaoRandomica(){
-    var posicaoX = Math.floor(Math.random() * largura) - 90
+    var posicaoX = Math.floor(Math.random() * largura) - 90 //math.floor = arredonda número, math.random = número aleatório vezes a largura -90 para não vazar da tela
 	var posicaoY = Math.floor(Math.random() * altura) - 90
 
 	posicaoX = posicaoX < 0 ? 0 : posicaoX
