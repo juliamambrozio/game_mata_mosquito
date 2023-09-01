@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Mata Mosquito</title>
+    <link rel="stylesheet" href="style.css">
     <script src="jogo-js.js"></script>
     <script>
         
@@ -11,5 +12,9 @@
 </head>
 <body onresize="ajustaTamanhoPalcoJogo()">
     
+
+    <script> //erro de precedência, porque o browser lê primeiro o Script e depois o body
+        posicaoRandomica()
+    </script>
 </body>
 </html>
