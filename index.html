@@ -11,11 +11,22 @@
     </script>
 </head>
 <body onresize="ajustaTamanhoPalcoJogo()">
-    
+    <div class="painel">
+        <div class="vida">
+            <img src="imagens/coracao_vazio.png" alt="Coração vazio">
+            <img src="imagens/coracao_cheio.png" alt="Coração cheio">
+            <img src="imagens/coracao_cheio.png" alt="Coração cheio">
+        </div>
+
+        <div class="cronometro">
+            <p>Tempo restante</p>
+
+        </div>
+
+    </div>
 
     <script> //erro de precedência, porque o browser lê primeiro o Script e depois o body
         
-
         setInterval(function(){
             posicaoRandomica() 
 
