@@ -24,13 +24,11 @@ function posicaoRandomica(){
     
     var mosquito = document.createElement('img')
     mosquito.src = 'imagens/mosca.png' //incluindo imagem
-    mosquito.className = tamanhoAleatorio()
+    mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio() //espaço para não juntar as classes
     mosquito.style.left = posicaoX + 'px'
 	mosquito.style.top = posicaoY + 'px'
 	mosquito.style.position = 'absolute'
-    document.body.appendChild(mosquito) //adicionando um filho para o body
-
-    
+    document.body.appendChild(mosquito) //adicionando um filho para o body  
 }
 
 function tamanhoAleatorio(){
@@ -42,6 +40,16 @@ function tamanhoAleatorio(){
         return 'mosquito2'
         case 2:
         return 'mosquito3'
+    }
+}
+
+function ladoAleatorio(){
+    var classe = Math.floor(Math.random() * 2)
+    switch(classe){
+        case 0:
+        return 'ladoA' //caso o random for 0, atribuirá o ladoA
+        case 1:
+        return 'ladoB'
     }
 }
 
