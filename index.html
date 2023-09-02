@@ -14,7 +14,12 @@
     
 
     <script> //erro de precedência, porque o browser lê primeiro o Script e depois o body
-        posicaoRandomica()
+        
+
+        setInterval(function(){
+            posicaoRandomica() 
+
+        }, 1000)
     </script>
 </body>
 </html>
