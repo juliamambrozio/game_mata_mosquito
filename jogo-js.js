@@ -17,7 +17,7 @@ function posicaoRandomica(){
     if(document.getElementById('mosquito')){
     document.getElementById('mosquito').remove()
     if(vidas > 3){
-        
+        window.location.href = 'fim_de_jogo.html'
     } else{
     document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
     vidas++ //vidas = 1, então quando não for clicado vai substituir a imagem, para selecionar outra var é só somar o vidas com mais um
