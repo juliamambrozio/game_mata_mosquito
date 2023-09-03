@@ -1,5 +1,6 @@
 var altura = 0
 var largura = 0
+var vidas = 1
 
 function ajustaTamanhoPalcoJogo() {
 	altura = window.innerHeight
@@ -15,6 +16,13 @@ function posicaoRandomica(){
     //remover o mosquito anterior caso exista
     if(document.getElementById('mosquito')){
     document.getElementById('mosquito').remove()
+    if(vidas > 3){
+        
+    } else{
+    document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
+    vidas++ //vidas = 1, então quando não for clicado vai substituir a imagem, para selecionar outra var é só somar o vidas com mais um
+    }
+    
     } //se localizar o elemento vai entrar na forma true
     
 
@@ -35,6 +43,9 @@ function posicaoRandomica(){
 	mosquito.style.top = posicaoY + 'px'
 	mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
+    mosquito.onclick = function(){
+        this.remove() //this: ajusta o contexto, referência ao próprio elemento html que faz a function
+    }
     document.body.appendChild(mosquito) //adicionando um filho para o body  
 }
 
