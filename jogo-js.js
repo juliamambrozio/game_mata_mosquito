@@ -18,8 +18,7 @@ var cronometro = setInterval(function(){
     if(tempo < 0){
         clearInterval(criaMosca) //para eliminar a execução de criação das moscas
         clearInterval(cronometro) //para não ficar repetindo a function
-
-        alert('Vitória')
+        window.location.href = 'vitoria.html'
 
     }else{
         document.getElementById('cronometro').innerHTML = tempo //valor contido entre as tags
