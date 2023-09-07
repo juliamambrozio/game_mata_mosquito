@@ -19,15 +19,18 @@
         </div>
 
         <div class="cronometro">
-            <p>Tempo restante</p>
+            <p>Tempo restante: <span id="cronometro"></span></p>
 
         </div>
 
     </div>
 
     <script> //erro de precedência, porque o browser lê primeiro o Script e depois o body
+
+        document.getElementById('cronometro').innerHTML = tempo //começava pelo número depois do definido porque não tinha lido o conteúdo do site
         
-        setInterval(function(){
+        var criaMosca =  setInterval(function(){
+            
             posicaoRandomica() 
 
         }, 1000)
