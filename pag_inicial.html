@@ -14,9 +14,9 @@
 
                 if(nivel === ''){
                     alert('Selecione um nível para iniciar o jogo')
-                    return false //se for igual a vazio o retorno será falso
+                    return false //se for igual a vázio o retorno será falso
                 } 
-                alert(nivel)
+                window.location.href = "index.html?" + nivel //enviando parâmetros para a página (não é convencional!)
                 
             }
         </script>
